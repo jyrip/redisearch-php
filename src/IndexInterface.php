@@ -25,6 +25,7 @@ interface IndexInterface extends BuilderInterface
     public function setNoFieldsEnabled(bool $noFieldsEnabled): IndexInterface;
     public function addTextField(string $name, float $weight = 1.0, bool $sortable = false, bool $noindex = false): IndexInterface;
     public function addNumericField(string $name, bool $sortable = false, bool $noindex = false): IndexInterface;
+    public function addTagField(string $name, bool $sortable = false, bool $noindex = false, string $separator = ','): IndexInterface;
     public function addGeoField(string $name, bool $noindex = false): IndexInterface;
     public function add($document): bool;
     public function addMany(array $documents, $disableAtomicity = false);
